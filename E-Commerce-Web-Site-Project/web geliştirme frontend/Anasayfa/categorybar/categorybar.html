@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+
+<div class="category-bar">
+    <div class="main-categories">
+        <button class="all-categories-btn" id="allCategoriesBtn">
+            <span class="hamburger">
+                <!-- Daha sevimli hamburger menü için SVG -->
+                <svg viewBox="0 0 30 30">
+                    <rect x="5" y="8" width="20" height="3" rx="1.5" fill="#ff6600"/>
+                    <rect x="5" y="14" width="20" height="3" rx="1.5" fill="#ff6600"/>
+                    <rect x="5" y="20" width="20" height="3" rx="1.5" fill="#ff6600"/>
+                </svg>
+            </span>
+            Tüm Kategoriler
+        </button>
+        <button class="category-btn">EV &amp; Yaşam</button>
+        <button class="category-btn">Kozmetik</button>
+        <button class="category-btn">Spor</button>
+        <button class="category-btn">Moda</button>
+        <button class="category-btn">Ayakkabı &amp; Çanta</button>
+        <button class="category-btn">Bahçe</button>
+        <button class="category-btn">Kişisel Bakım</button>
+        <button class="category-btn">Pet Shop</button>
+    </div>
+       <div id="categories-modal" class="categories-modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close-modal" id="closeCategoriesModal">&times;</span>
+        <h3>Kategoriler</h3>
+        <ul class="categories-list">
+            <li data-category="Ev&Yaşam/Ev&Yaşam.html">Ev & Yaşam</li>
+            <li data-category="Kozmetik/Kozmetik.html">Kozmetik</li>
+            <li data-category="Spor/Spor.html">Spor</li>
+            <li data-category="Moda/Moda.html">Moda</li>
+            <li data-category="Ayakkabı/Ayakkabı&Çanta.html">Ayakkabı & Çanta</li>
+            <li data-category="Bahçe/Bahçe.html">Bahçe</li>
+            <li data-category="Kişisel Bakım/Kişisel Bakım.html">Kişisel Bakım</li>
+            <li data-category="Pet Shop/Pet Shop.html">Pet Shop</li>
+        </ul>
+    </div>
+   </div>
+</div>    

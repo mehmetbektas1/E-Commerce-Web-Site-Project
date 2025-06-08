@@ -1,0 +1,278 @@
+[
+  {
+    "id": "urun1",
+    "name": "Düğme detaylı siyah elbise",
+    "price": "650",
+    "image": "../products/image/urun1.webp",
+    "description": "Şık ve zarif bir elbise. Hafif kumaşıyla gün boyu konfor sunar.",
+    "category": "Moda"
+  },
+  {
+    "id": "urun2",
+    "name": "BB krem",
+    "price": "350",
+    "image": "../products/image/urun2.webp",
+    "description": "Cildinize uyum sağlayan hafif kapatıcı.",
+    "category": "Kozmetik"
+  },
+  {
+    "id": "urun3",
+    "name": "BH HARMONİY Kapşon",
+    "price": "1000",
+    "image": "../products/image/urun3.webp",
+    "description": "Günlük kullanıma uygun, kapüşonlu rahat üst.",
+    "category": "Moda"
+  },
+  {
+    "id": "urun4",
+    "name": "Yazlık elbise",
+    "price": "550",
+    "image": "../products/image/urun4.webp",
+    "description": "Yaz aylarında tercih edilebilecek hafif elbise.",
+    "category": "Moda"
+  },
+  {
+    "id": "urun5",
+    "name": "Anti Bakteriyel Kedi Macunu",
+    "price": "400",
+    "image": "../products/image/urun5.webp",
+    "description": "Evcil hayvanlar için ağız sağlığı ürünü.",
+    "category": "Pet Shop"
+  },
+  {
+    "id": "urun6",
+    "name": "Nevresim Takımı",
+    "price": "1900",
+    "image": "../products/image/urun6.webp",
+    "description": "%100 Pamuk Çift Kişilik  Nevresim Takımı",
+    "category": "Ev & Yaşam"
+  },
+  {
+    "id": "urun7",
+    "name": "Dokuma Halı",
+    "price": "385",
+    "image": "../products/image/urun7.webp",
+    "description": " Modern Dokuma Halı Oturma Odası .",
+    "category": "Ev & Yaşam"
+  },
+  {
+    "id": "urun8",
+    "name": "Dekoratif Tütsü",
+    "price": "144",
+    "image": "../products/image/urun8.webp",
+    "description": "Dekoratif Tütsülük ve Vazo Seti.",
+    "category": "Ev & Yaşam"
+  }
+  ,
+  {
+    "id": "urun9",
+    "name": "Oda Kokusu",
+    "price": "414",
+    "image": "../products/image/urun9.webp",
+    "description": "Gelin Çiçeğinin Muhteşem Kokusunu Evinize Taşıyın.",
+    "category": "Ev & Yaşam"
+  },
+  {
+    "id": "urun10",
+    "name": "Tek Kişilik Yorgan",
+    "price": "699",
+    "image": "../products/image/urun10.webp",
+    "description": "Karaca Home Microfiber Tek Kişilik Yorgan.",
+    "category": "Ev & Yaşam"
+  },
+  {
+    "id": "urun11",
+    "name": "Kaş Sabitliyici",  
+    "price": "499",
+    "image": "../products/image/urun11.webp",
+    "description": "Gün Boyu Kilitlenmiş Kaşlar İçin Hazır Ol.",
+    "category": "Kozmetik"
+  },
+  {
+    "id": "urun12",
+    "name": "Göz Kalemi",
+    "price": "250",
+    "image": "../products/image/urun12.webp",
+    "description": "Suya Dayanıklı Jel Göz Kalemi Siyah .",
+    "category": "Kozmetik"
+  }
+  ,
+  {
+    "id": "urun13",
+    "name": "Maskara",
+    "price": "399",
+    "image": "../products/image/urun13.webp",
+    "description": "Flormar Longer Than Ever Uzun Görünüm Veren Maskara.",
+    "category": "Kozmetik"
+  },
+  {
+    "id": "urun14",
+    "name": "Kapatıcı",
+    "price": "270",
+    "image": "../products/image/urun14.webp",
+    "description": "Maybelline New York Instant Anti Age Eraser Kapatıcı - 00 Ivory.",
+    "category": "Kozmetik"
+  },
+
+   {
+    "id": "urun15",
+    "name": "Koşu Bandı",
+    "price": "5300",
+    "image": "../products/image/urun15.webp",
+    "description": "W-FIT Uzaktan Kumandalı Koşu Bandı 10 Km / Hz.",
+    "category": "Spor"
+  }
+  ,
+  {
+    "id": "urun16",
+    "name": "Egzersiz Bisikleti",
+    "price": "5999",
+    "image": "../products/image/urun16.webp",
+    "description": "FYsm X-Speed Profesyonel Spinning Bike 150 kg Kapasiteli Fitness ve Kondisyon Egzersiz Bisikleti.",
+    "category": "Spor"
+  },
+  {
+    "id": "urun17",
+    "name": "Direnç Bandı 25 Kg",
+    "price": "480",
+    "image": "../products/image/urun17.webp",
+    "description": "25 Kg Direnç Bandı Seti, Spor Direnç Bandı Seti, Egzersiz Bandı Seti.",
+    "category": "Spor"
+  }
+  ,
+  {
+    "id": "urun18",
+    "name": "Tişort Oversize",
+    "price": "250",
+    "image": "../products/image/urun18.webp",
+    "description": "Kumaş Slim Fit Dar Kesim.",
+    "category": "Moda"
+  }
+  ,
+  {
+    "id": "urun19",
+    "name": "Altınyıldız Classics Gri Kıvrılmaz Polo Yaka Tişört",
+    "price": "433",
+    "image": "../products/image/urun19.webp",
+    "description": "Kıvrılmaz Polo Yaka, Kısa Kol, Cepsiz Polo Yaka Tişört.",
+    "category": "Moda"
+  },
+  {
+    "id": "urun20",
+    "name": "Yuvarlak Yaka Fırfırlı Kısa Kol Bluz",
+    "price": "796",
+    "image": "../products/image/urun20.webp",
+    "description": "Yuvarlak Yaka Fırfırlı Kısa Kol Önü Bloklu Rahat Kesim Düğme Kapamalı Cool ve Şık Bluz.",
+    "category": "Moda"
+  }
+  ,
+  {
+    "id": "urun21",
+    "name": "Koşu & Yürüyüş Ayakkabısı",
+    "price": "750",
+    "image": "../products/image/urun21.webp",
+    "description": "Slazenger TUESDAY I Kadın Sneaker Koşu & Yürüyüş Ayakkabısı Koyu Gri.",
+    "category": "Ayakkabı & Çanta"
+  }
+  ,
+  {
+    "id": "urun22",
+    "name": "Motorlu Tırpan",
+    "price": "179",
+    "image": "../products/image/urun22.webp",
+    "description": "Whell Motorlu Tırpan Kıyı Temizleme Çelik Fırça Başlık.",
+    "category": "Bahçe"
+  },
+  {
+    "id": "urun23",
+    "name": "120 Basınçlı Yıkama Makinesi",
+    "price": "3500",
+    "image": "../products/image/urun23.webp",
+    "description": "Bosch Easy Aquatak 120 1500 W 120 Bar Basınçlı Yıkama Makinesi.",
+    "category": "Bahçe"
+  }
+  ,
+  {
+    "id": "urun24",
+    "name": "Yüksek Basınçlı Oto Araba Bahçe Yıkama",
+    "price": "2200",
+    "image": "../products/image/urun24.webp",
+    "description": "Kraft Hart Çift Akülü Şarjlı Yüksek Basınçlı Oto Araba Bahçe Yıkama Sulama ve Temizleme Tabancası Makinesi.",
+    "category": "Bahçe"
+  }
+  ,
+  {
+    "id": "urun25",
+    "name": "Zincirli Tırpan Başlığı",
+    "price": "345",
+    "image": "../products/image/urun25.webp",
+    "description": "Mur-Cell Zincirli Tırpan Başlığı Canavar Başlık Benzinli Tırpan.",
+    "category": "Bahçe"
+  },
+  {
+    "id": "urun26",
+    "name":"Su Bazlı Nemlendirici ",
+    "price":"306",
+    "image":"../products/image/urun26.webp",
+    "description":"Moisturizer | Su Bazlı Nemlendirici Yüz Kremi Aydınlatıcı | Tüm Cilt Tipleri",
+    "category":"Kişisel Bakım"
+  },
+  {
+    "id": "urun27",
+    "name": "Yüz Temizleme Jeli 500 ml",
+    "price": "615",
+    "image": "../products/image/urun27.webp",
+    "description": "Sebium Karma, Yağlı ve Akne Eğilimli Ciltler Sivilce, Siyah Nokta Karşıtı Yüz Temizleme Jeli 500 ml.",
+    "category": "Kişisel Bakım"
+  },
+ {
+    "id": "urun28",
+    "name": "Bitkisel Retinol Serum 20 ml",
+    "price": "317",
+    "image": "../products/image/urun28.webp",
+    "description": "Görkito The Skin Co. Bakuchiol Bitkisel Retinol Serum 20 ml.",
+    "category": "Kişisel Bakım"
+  },
+ {
+    "id": "urun29",
+    "name":"Kolojen Gece Makesi ",
+    "price":"455",
+    "image":"../products/image/urun29.webp",
+    "description":"Ph Lab Phlab Collagen Night Soyulabilen Kolajen Gece Maskesi, Soyulabilir Kolejen Yüz Maskesi",
+    "category":"Kişisel Bakım"
+  },
+  {
+    "id": "urun30",
+    "name": "Yetişkin Kedi Maması 10 kg",
+    "price": "690",
+    "image": "../products/image/urun30.webp",
+    "description": "Bonnie Beef Dana Etli Yetişkin Kedi Maması 10 kg.",
+    "category": "Pet Shop"
+  },
+  {
+    "id": "urun31",
+    "name": "Ağız ve Diş Bakım Spreyi 100m",
+    "price": "189",
+    "image": "../products/image/urun31.webp",
+    "description": "Veturel Ağız ve Diş Bakım Spreyi 100ml Kedi Ağız Bakımı Köpek Ağız Kokusu Diş Eti Plak Tartar.",
+    "category": "Pet Shop"
+  },
+  {
+    "id": "urun32",
+    "name": "Şarjlı Akıllı Otomatik Mama Ve Su Kabı",
+    "price": "3500",
+    "image": "../products/image/urun32.webp",
+    "description": "Yasomi Du-F03v Smartpaw+ 4l/5l Kapasiteli Şarjlı Akıllı Otomatik Mama Ve Su Kabı.",
+    "category": "Pet Shop"
+  },
+  {
+    "id": "urun33",
+    "name": "Premium Paraket Yemi 1 kg",
+    "price": "188",
+    "image": "../products/image/urun33.webp",
+    "description": "Gold Wings Premium Paraket Yemi 1 kg.",
+    "category": "Pet Shop"
+  }
+
+
+]

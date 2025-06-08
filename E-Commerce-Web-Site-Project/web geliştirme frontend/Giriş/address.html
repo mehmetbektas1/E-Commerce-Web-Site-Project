@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adres Ekle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    input[type="text"], button {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .message {
+      margin-top: 15px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .token-display {
+      font-size: 12px;
+      margin-top: 10px;
+      color: #555;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Adres Ekle</h2>
+    <form id="addressForm">
+      <input type="text" id="city" placeholder="Şehir" required>
+      <input type="text" id="district" placeholder="İlçe" required>
+      <input type="text" id="neighborhood" placeholder="Mahalle" required>
+      <input type="text" id="street" placeholder="Sokak" required>
+      <button type="submit">Kaydet</button>
+    </form>
+    <div class="message" id="messageBox"></div>
+    <div class="token-display" id="tokenDisplay"></div>
+  </div>
+
+  <script>
+    const token = localStorage.getItem("access_token");
+    document.getElementById("tokenDisplay").textContent = "Token: " + (token ?? "Bulunamadı");
+
+    document.getElementById("addressForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const messageBox = document.getElementById("messageBox");
+
+      if (!token) {
+        messageBox.textContent = "Token bulunamadı. Giriş yapmalısınız.";
+        messageBox.style.color = "red";
+        return;
+      }
+
+      const address = {
+        city: document.getElementById("city").value,
+        district: document.getElementById("district").value,
+        neighborhood: document.getElementById("neighborhood").value,
+        street: document.getElementById("street").value
+      };
+
+      try {
+        const response = await fetch("http://localhost:8080/rest/api/address/save", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+          },
+          body: JSON.stringify(address)
+        });
+
+        if (response.ok) {
+          messageBox.style.color = "green";
+          messageBox.textContent = "Adres başarıyla kaydedildi!";
+        } else {
+          const errorText = await response.text();
+          messageBox.style.color = "red";
+          messageBox.textContent = `Sunucu hatası: ${response.status} - ${errorText}`;
+        }
+      } catch (err) {
+        messageBox.style.color = "red";
+        messageBox.textContent = "Fetch hatası: " + err.message;
+        console.error("Fetch error:", err);
+      }
+    });
+  </script>
+</body>
+</html>

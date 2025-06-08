@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Giriş Yap</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 320px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #007bff;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .error, .token-output {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .error {
+      color: #d00;
+    }
+
+    .token-output {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Giriş Yap</h2>
+  <form id="loginForm">
+    <input type="text" id="username" placeholder="Kullanıcı Adı" required />
+    <input type="password" id="password" placeholder="Şifre" required />
+    <button type="submit">Giriş Yap</button>
+    <div class="error" id="errorMsg"></div>
+    <div class="token-output" id="tokenOutput"></div>
+  </form>
+</div>
+
+<script>
+  document.getElementById('loginForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const username = document.getElementById('username').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    try {
+      const response = await fetch('http://localhost:8080/authenticate', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ username, password })
+      });
+
+      const tokenDiv = document.getElementById('tokenOutput');
+      const errorDiv = document.getElementById('errorMsg');
+
+      if (response.ok) {
+        const data = await response.json();
+
+        const accessToken = data.payload?.accessToken;
+        const refreshToken = data.payload?.refreshToken;
+        const userId = data.payload?.user_id;
+
+        if (!accessToken) {
+          tokenDiv.textContent = "accessToken bulunamadı. Backend yanıtı hatalı.";
+          tokenDiv.style.color = "red";
+          return;
+        }
+
+        localStorage.setItem('access_token', accessToken);
+        localStorage.setItem('username', username);
+        localStorage.setItem('refresh_token', refreshToken);
+        localStorage.setItem('user_id', userId);
+
+        tokenDiv.textContent = "Giriş başarılı. Token kaydedildi.";
+        tokenDiv.style.color = "green";
+        errorDiv.textContent = "";
+
+        setTimeout(() => {
+          window.location.href = '../Anasayfa/Anasayfa1.html';
+        }, 2000);
+
+      } else {
+        errorDiv.textContent = "Kullanıcı adı veya şifre yanlış.";
+        tokenDiv.textContent = "";
+      }
+
+    } catch (err) {
+      document.getElementById('errorMsg').textContent = 'Bağlantı hatası: ' + err.message;
+    }
+  });
+</script>
+
+</body>
+</html>

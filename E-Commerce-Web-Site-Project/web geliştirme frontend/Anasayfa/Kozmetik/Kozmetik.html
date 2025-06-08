@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kozmetik</title>
+
+  <!-- NAVBAR CSS -->
+  <link rel="stylesheet" href="../navbar/navbar.css" />
+
+  <!-- Sayfaya özel CSS -->
+  <link rel="stylesheet" href="Kozmetik.css" />
+</head>
+<body>
+
+  <!-- NAVBAR ALANI -->
+  <div id="navbar-container"></div>
+
+  <!-- Sayfa içeriği -->
+  <div class="container">
+    <a href="../Anasayfa1.html">← Geri Dön</a>
+    <h1>Kozmetik Ürünleri</h1>
+    <div id="kozmetik-container"></div>
+  </div>
+
+  <!-- NAVBAR JS -->
+  <script>
+    fetch('../navbar/navbar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('navbar-container').innerHTML = html;
+
+        const loginBtn = document.getElementById('login-btn');
+        const username = localStorage.getItem('username');
+
+        if (loginBtn) {
+          if (username) {
+            loginBtn.textContent = username;
+            loginBtn.onclick = () => {
+              window.location.href = '../hesabim/hesabim.html';
+            };
+          } else {
+            loginBtn.addEventListener('click', () => {
+              window.location.href = '../../Giriş/Giriş.html';
+            });
+          }
+        }
+
+        const cartBtn = document.getElementById('cart-btn');
+        if (cartBtn) {
+          cartBtn.addEventListener('click', () => {
+            window.location.href = '../sepet/sepet.html';
+          });
+        }
+
+        const searchInput = document.getElementById("search-input");
+        if (searchInput) {
+          searchInput.addEventListener("keydown", function(e) {
+            if (e.key === "Enter") {
+              const query = searchInput.value.trim().toLowerCase();
+              if (!query) return;
+
+              fetch('../products/products.json')
+                .then(res => res.json())
+                .then(products => {
+                  const foundProduct = products.find(p => p.name && p.name.toLowerCase().includes(query));
+                  if (foundProduct) {
+                    window.location.href = `../products/products.html?id=${foundProduct.id}`;
+                    return;
+                  }
+
+                  const foundCategory = products.find(p => p.category && p.category.toLowerCase().includes(query));
+                  if (foundCategory) {
+                    let page = "";
+                    switch (foundCategory.category.toLowerCase()) {
+                      case "kozmetik": page = "../Kozmetik/Kozmetik.html"; break;
+                      case "spor": page = "../Spor/Spor.html"; break;
+                      case "moda": page = "../Moda/MODA.html"; break;
+                      case "ev & yaşam": page = "../Ev&Yaşam/Ev&Yaşam.html"; break;
+                      case "pet shop": page = "../Pet Shop/Pet Shop.html"; break;
+                      case "bahçe": page = "Bahçe.html"; break;
+                      case "kişisel bakım": page = "../Kişisel Bakım/Kişisel Bakım.html"; break;
+                      case "ayakkabı & çanta": page = "../Ayakkabı/Ayakkabı&Çanta.html"; break;
+                      default: page = ""; break;
+                    }
+                    if (page) window.location.href = page;
+                    else alert("Kategoriye ait sayfa bulunamadı.");
+                    return;
+                  }
+
+                  alert("Aradığınız ürün veya kategori bulunamadı.");
+                });
+            }
+          });
+        }
+      });
+  </script>
+
+  <!-- Sayfaya özel JS -->
+  <script src="Kozmetik.js"></script>
+</body>
+</html>
